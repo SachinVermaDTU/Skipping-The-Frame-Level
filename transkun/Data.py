@@ -261,7 +261,7 @@ def createDataset(datasetPath, extendPedal = True):
 
 def parseMIDIFile(midiPath, extendSustainPedal=False):
     # hack for the maps dataset
-    pretty_midi.pretty_midi.MAX_TICK = 1e10
+    pretty_midi.pretty_midi.MAX_TICK = 1e5
     midiFile = pretty_midi.PrettyMIDI(midiPath)
     assert(len(midiFile.instruments) == 1)
 
